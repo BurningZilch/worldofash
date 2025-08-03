@@ -1,0 +1,28 @@
+footer {
+  padding: 1rem 2rem;
+  background: #1e1e2f;
+  color: #ccc;
+  font-size: 0.9rem;
+  margin-top: auto;
+
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+    .left {
+      margin-bottom: 0.5rem;
+    }
+
+    .right a {
+      margin-left: 1rem;
+      color: #ccc;
+      text-decoration: none;
+
+      &:hover {
+        color: #61dafb;
+      }
+    }
+  }
+}

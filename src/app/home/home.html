@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>我的主页 | 软件开发者</title>
+  <!-- 引入 Google Fonts (Poppins) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- 引入编译后的 CSS -->
+  <link rel="stylesheet" href="/home.scss">
+</head>
+<body>
+<div class="container main-wrapper">
+  <!-- ================================================== -->
+  <!-- 1. "英雄" 版块 (Hero Section)                       -->
+  <!-- ================================================== -->
+  <header class="hero">
+    <div class="hero__content">
+      <!-- 头像 -->
+    <!--  <img src="https://placehold.co/160x160/6366f1/ffffff?text=头像"
+           alt="专业头像"
+           class="hero__avatar"> -->
+      <!-- 姓名 -->
+      <h1 class="hero__name">
+        毕真 / Zhen Bi
+      </h1>
+      <!-- 职称 -->
+      <p class="hero__title">
+        full-stack developer
+      </p>
+      <!-- 标语 -->
+      <p class="hero__description">
+        Motivated recent graduate IT student.
+      </p>
+      <!-- 行动号召 (CTA) 按钮 -->
+      <div class="hero__cta">
+        <a href="#projects" class="hero__button hero__button--primary">
+          Projects
+        </a>
+        <a href="https://docs.google.com/document/d/1Jk4a4LDPQeAZArMC8mAn6Av1ZaVKMFjJ/edit?usp=sharing&ouid=105261071278760251874&rtpof=true&sd=true" download class="hero__button hero__button--secondary">
+          Resume
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ================================================== -->
+    <!-- 2. "关于我" 部分 (About Me Section)                 -->
+    <!-- ================================================== -->
+    <section id="about" class="about">
+      <div class="about__container">
+        <h2 class="about__title">About Me</h2>
+        <div class="about__divider"></div>
+        <!-- 个人简介 -->
+        <p class="about__description">
+          Motivated recent graduate IT student.
+        </p>
+        <!-- 核心技能列表 -->
+        <h3 class="about__skills-title">Core Skill</h3>
+        <div class="about__skills-grid">
+          <!-- Skill 1: Interaction Design -->
+          <div class="about__skill">
+            <div class="about__skill-icon">
+              <!-- Example icon: pencil or interface-related -->
+              <svg xmlns="http://www.w3.org/2000/svg" class="skill-interaction" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M3 17.25V21h3.75l11.06-11.06-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a1.003 1.003 0 0 0-1.42 0l-1.83 1.83 3.75 3.75 1.84-1.83z"/>
+              </svg>
+            </div>
+            <span class="about__skill-name">Interaction Design</span>
+          </div>
+
+          <!-- Skill 2: Cyber Security -->
+          <div class="about__skill">
+            <div class="about__skill-icon">
+              <!-- Example icon: shield -->
+              <svg xmlns="http://www.w3.org/2000/svg" class="skill-cybersecurity" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 2.18l7 3.11v4.38c0 4.53-3.11 8.91-7 9.9-3.89-.99-7-5.37-7-9.9V6.29l7-3.11zm0 4.32c-.83 0-1.5.67-1.5 1.5v4c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5v-4c0-.83-.67-1.5-1.5-1.5z"/>
+              </svg>
+            </div>
+            <span class="about__skill-name">Cyber Security</span>
+          </div>
+
+          <!-- Skill 3: CI/CD -->
+          <div class="about__skill">
+            <div class="about__skill-icon">
+              <!-- Example icon: cog or automation -->
+              <svg xmlns="http://www.w3.org/2000/svg" class="skill-cicd" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19.43 12.98C19.48 12.66 19.5 12.33 19.5 12s-.02-.66-.07-.98l2.11-1.65a.5.5 0 0 0 .11-.65l-2-3.46a.5.5 0 0 0-.61-.22l-2.49 1a7.07 7.07 0 0 0-1.7-.99l-.38-2.65a.5.5 0 0 0-.5-.42h-4a.5.5 0 0 0-.5.42l-.38 2.65c-.6.22-1.17.53-1.7.99l-2.49-1a.5.5 0 0 0-.61.22l-2 3.46a.5.5 0 0 0 .11.65L4.57 11c-.05.32-.07.66-.07 1s.02.68.07 1l-2.11 1.65a.5.5 0 0 0-.11.65l2 3.46c.14.24.43.33.68.22l2.49-1c.53.46 1.1.77 1.7.99l.38 2.65c.05.26.25.42.5.42h4c.25 0 .45-.16.5-.42l.38-2.65c.6-.22 1.17-.53 1.7-.99l2.49 1c.25.11.54.02.68-.22l2-3.46a.5.5 0 0 0-.11-.65l-2.11-1.65zM12 15.5A3.5 3.5 0 1 1 12 8.5a3.5 3.5 0 0 1 0 7z"/>
+              </svg>
+            </div>
+            <span class="about__skill-name">Game Design</span>
+          </div>
+
+          <!-- Skill 4: Software Development -->
+          <div class="about__skill">
+            <div class="about__skill-icon">
+              <!-- Example icon: code brackets -->
+              <svg xmlns="http://www.w3.org/2000/svg" class="skill-softwaredev" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M8.1 13.34L6.28 12l1.82-1.34L7.24 9 4 12l3.24 3 0.86-1.66zM15.9 13.34L17.72 12l-1.82-1.34L16.76 9 20 12l-3.24 3-0.86-1.66zM9.4 19h1.5l3.2-14h-1.5L9.4 19z"/>
+              </svg>
+            </div>
+            <span class="about__skill-name">Software Development</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================================================== -->
+    <!-- 3. "项目" 展示 (Projects Section)                   -->
+    <!-- ================================================== -->
+    <section id="projects" class="projects">
+      <div class="projects__container">
+        <h2 class="projects__title">Show Case</h2>
+        <div class="projects__divider"></div>
+        <div class="projects__grid">
+          <!-- 项目卡片 1 -->
+          <div class="projects__card">
+            <img src="https://placehold.co/600x400/1f2937/ffffff?text=Project1" alt="项目1截图" class="projects__card-image">
+            <div class="projects__card-content">
+              <h3 class="projects__card-title">Personal Blog</h3>
+              <p class="projects__card-description">A journal of learning</p>
+              <div class="projects__card-actions">
+                <a href="https://burningzilch.github.io/" target="_blank" class="projects__card-demo-link">Blog</a>
+                <a href="https://github.com/BurningZilch/BurningZilch.github.io" target="_blank" class="projects__card-github-link">
+                  <svg fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- 项目卡片 2 -->
+          <div class="projects__card">
+            <img src="https://placehold.co/600x400/1f2937/ffffff?text=Project2" alt="项目2截图" class="projects__card-image">
+            <div class="projects__card-content">
+              <h3 class="projects__card-title">DK-DION</h3>
+              <p class="projects__card-description">GrovePi Legacy animation support</p>
+              <div class="projects__card-actions">
+
+                <a href="https://github.com/BurningZilch/DK-DINO" target="_blank" class="projects__card-github-link">
+                  <svg fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- 项目卡片 3 -->
+          <div class="projects__card">
+            <img src="https://placehold.co/600x400/1f2937/ffffff?text=Project3" alt="项目3截图" class="projects__card-image">
+            <div class="projects__card-content">
+              <h3 class="projects__card-title">
+                BLE-jamming-simulation
+              </h3>
+              <p class="projects__card-description">a university assessment that simulates how Bluetooth Low Energy (BLE) jamming interference impacts the performance of a machine learning model.</p>
+              <div class="projects__card-actions">
+                <a href="https://github.com/BurningZilch/BLE-jamming-simulation" target="_blank" class="projects__card-github-link">
+                  <svg fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================================================== -->
+  <!-- 4. "联系方式" 部分 (Contact Section)                -->
+  <!-- ================================================== -->
+  <footer id="contact" class="contact">
+    <div class="contact__container">
+      <h2 class="contact__title">Contact</h2>
+      <div class="contact__divider"></div>
+      <p class="contact__description">
+        I'm currently looking for new opportunities, so please feel free to contact me. Whether it's for technical exchange or collaboration opportunities, I'll get back to you as soon as possible!
+      </p>
+      <a href="mailto:ashzhenbi@gmail.com" class="contact__email-button">
+        Email
+      </a>
+      <!-- 社交媒体链接 -->
+      <div class="contact__social">
+        <a href="https://github.com/BurningZilch" target="_blank" class="contact__social-link">
+          <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12.013c0 4.418 2.865 8.168 6.839 9.492.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.03-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.378.203 2.398.1 2.65.64.7 1.028 1.595 1.028 2.688 0 3.848-2.338 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12.013C22 6.477 17.523 2 12 2z" clip-rule="evenodd" />
+          </svg>
+          <span class="sr-only">GitHub</span>
+        </a>
+        <a href="https://www.linkedin.com/in/zhen-bi-438140142/" target="_blank" class="contact__social-link">
+          <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+          </svg>
+          <span class="sr-only">LinkedIn</span>
+        </a>
+      </div>
+    </div>
+
+  </footer>
+</div>
+</body>
+</html>
