@@ -1,13 +1,21 @@
+version: 1
+backend:
+  phases:
+    build:
+      commands:
+        - npm ci --cache .npm --prefer-offline
 frontend:
   phases:
     preBuild:
       commands:
-        - npx ng version
+        # Install the Angular CLI globally before using it
+        - npm install -g @angular/cli
+        - ng version # Use 'ng' instead of 'npx ng' after global installation
     build:
       commands:
         - ng build --configuration production
   artifacts:
-    baseDirectory: dist/worldofash/browser  # Corrected typo here
+    baseDirectory: dist/worldofash/browser
     files:
       - '**/*'
   cache:
