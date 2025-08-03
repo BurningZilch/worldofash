@@ -1,16 +1,11 @@
 version: 1
-backend:
-  phases:
-    build:
-      commands:
-        - npm ci --cache .npm --prefer-offline
 frontend:
   phases:
     preBuild:
       commands:
         # Install the Angular CLI globally before using it
         - npm install -g @angular/cli
-        - ng version # Use 'ng' instead of 'npx ng' after global installation
+        - ng version
     build:
       commands:
         - ng build --configuration production
@@ -21,3 +16,8 @@ frontend:
   cache:
     paths:
       - node_modules/**/*
+# Add this section to specify a compatible Node.js runtime
+# Note: You can specify a more recent version like 20.x, 22.x, or 24.x
+# based on your project's compatibility.
+  runtime:
+    nodejs: 20.x
