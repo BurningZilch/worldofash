@@ -8,9 +8,9 @@ frontend:
         - npm ci
     build:
       commands:
-        - npm run build
+        - ng build
   artifacts:
-    baseDirectory: dist
+    baseDirectory: dist/worldofash/broswer
     files:
       - '**/*'
   cache:
