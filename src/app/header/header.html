@@ -4,7 +4,8 @@
   </div>
   <nav>
     <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a>
-    <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Projects</a>
-    <a href="https://burningzilch.github.io/">Blogs</a>
+    <!-- 修改 Projects 链接，使用 href 和点击事件 -->
+    <a href="#projects" (click)="scrollToAnchor('projects')" class="nav-link">Projects</a>
+    <a href="https://burningzilch.github.io/" class="nav-link">Blogs</a>
   </nav>
 </header>
