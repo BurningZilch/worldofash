@@ -1,3 +1,5 @@
+@use "sass:map";
+
 // ================================================
 // 变量定义
 // ================================================
@@ -57,8 +59,8 @@ $spacing: (
 // 混合器 (Mixins)
 // ================================================
 @mixin respond-to($breakpoint) {
-  @if map-has-key($breakpoints, $breakpoint) {
-    @media (min-width: map-get($breakpoints, $breakpoint)) {
+  @if map.has-key($breakpoints, $breakpoint) {
+    @media (min-width: map.get($breakpoints, $breakpoint)) {
       @content;
     }
   }
@@ -105,7 +107,7 @@ $spacing: (
 @mixin section-title {
   font-size: 1.875rem;
   font-weight: 700;
-  color: map-get($colors, text-primary);
+  color: map.get($colors, text-primary);
   text-align: center;
   margin-bottom: 1rem;
 
@@ -117,7 +119,7 @@ $spacing: (
 @mixin section-divider {
   width: 5rem;
   height: 0.25rem;
-  background-color: map-get($colors, divider-color);
+  background-color: map.get($colors, divider-color);
   margin: 0 auto 3rem;
 }
 
@@ -130,8 +132,8 @@ $spacing: (
 
 body {
   font-family: $font-family-primary;
-  background-color: map-get($colors, bg-primary);
-  color: map-get($colors, text-secondary);
+  background-color: map.get($colors, bg-primary);
+  color: map.get($colors, text-secondary);
   margin: 0;
   padding: 0;
   line-height: 1.6;
@@ -167,8 +169,11 @@ h1, h2, h3, a, button {
 .hero {
   text-align: center;
   @include section-spacing();
-  padding-top: 4rem;
-  padding-bottom: 6rem;
+
+  & {
+    padding-top: 4rem;
+    padding-bottom: 6rem;
+  }
 
   @include respond-to(md) {
     padding-top: 6rem;
@@ -185,7 +190,7 @@ h1, h2, h3, a, button {
     height: 8rem;
     border-radius: 50%;
     margin: 0 auto 1.5rem;
-    border: 4px solid map-get($colors, border-color);
+    border: 4px solid map.get($colors, border-color);
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
 
     @include respond-to(md) {
@@ -197,7 +202,7 @@ h1, h2, h3, a, button {
   &__name {
     font-size: 2.25rem;
     font-weight: 700;
-    color: map-get($colors, text-primary);
+    color: map.get($colors, text-primary);
     margin-bottom: 0.5rem;
 
     @include respond-to(md) {
@@ -207,7 +212,7 @@ h1, h2, h3, a, button {
 
   &__title {
     font-size: 1.25rem;
-    color: map-get($colors, indigo-400);
+    color: map.get($colors, indigo-400);
     margin-bottom: 1.5rem;
 
     @include respond-to(md) {
@@ -247,17 +252,17 @@ h1, h2, h3, a, button {
     }
 
     &--primary {
-      background-color: map-get($colors, indigo-600);
-      color: map-get($colors, text-primary);
+      background-color: map.get($colors, indigo-600);
+      color: map.get($colors, text-primary);
 
       &:hover {
-        background-color: map-get($colors, indigo-700);
+        background-color: map.get($colors, indigo-700);
       }
     }
 
     &--secondary {
-      background-color: map-get($colors, bg-tertiary);
-      color: map-get($colors, text-primary);
+      background-color: map.get($colors, bg-tertiary);
+      color: map.get($colors, text-primary);
 
       &:hover {
         background-color: #4b5563;
@@ -271,7 +276,10 @@ h1, h2, h3, a, button {
 // ================================================
 .about {
   @include section-spacing();
-  border-top: 1px solid map-get($colors, border-color);
+
+  & {
+    border-top: 1px solid map.get($colors, border-color);
+  }
 
   &__container {
     max-width: 64rem;
@@ -301,7 +309,7 @@ h1, h2, h3, a, button {
   &__skills-title {
     font-size: 1.5rem;
     font-weight: 600;
-    color: map-get($colors, text-primary);
+    color: map.get($colors, text-primary);
     margin-bottom: 2rem;
   }
 
@@ -327,7 +335,7 @@ h1, h2, h3, a, button {
     &-icon {
       width: 4rem;
       height: 4rem;
-      background-color: map-get($colors, bg-secondary);
+      background-color: map.get($colors, bg-secondary);
       border-radius: 50%;
       display: flex;
       align-items: center;
@@ -342,7 +350,7 @@ h1, h2, h3, a, button {
 
     &-name {
       font-weight: 500;
-      color: map-get($colors, text-secondary);
+      color: map.get($colors, text-secondary);
     }
   }
 }
@@ -352,7 +360,10 @@ h1, h2, h3, a, button {
 // ================================================
 .projects {
   @include section-spacing();
-  border-top: 1px solid map-get($colors, border-color);
+
+  & {
+    border-top: 1px solid map.get($colors, border-color);
+  }
 
   &__container {
     max-width: 72rem;
@@ -383,7 +394,7 @@ h1, h2, h3, a, button {
   }
 
   &__card {
-    background-color: map-get($colors, bg-secondary);
+    background-color: map.get($colors, bg-secondary);
     border-radius: 0.5rem;
     overflow: hidden;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -402,12 +413,12 @@ h1, h2, h3, a, button {
     &-title {
       font-size: 1.25rem;
       font-weight: 700;
-      color: map-get($colors, text-primary);
+      color: map.get($colors, text-primary);
       margin-bottom: 0.5rem;
     }
 
     &-description {
-      color: map-get($colors, text-muted);
+      color: map.get($colors, text-muted);
       margin-bottom: 1rem;
     }
 
@@ -418,22 +429,22 @@ h1, h2, h3, a, button {
     }
 
     &-demo-link {
-      color: map-get($colors, indigo-400);
+      color: map.get($colors, indigo-400);
       text-decoration: none;
       font-weight: 600;
       @include transition();
 
       &:hover {
-        color: map-get($colors, indigo-500);
+        color: map.get($colors, indigo-500);
       }
     }
 
     &-github-link {
-      color: map-get($colors, text-muted);
+      color: map.get($colors, text-muted);
       @include transition();
 
       &:hover {
-        color: map-get($colors, text-primary);
+        color: map.get($colors, text-primary);
       }
 
       svg {
@@ -448,9 +459,13 @@ h1, h2, h3, a, button {
 // 联系方式部分 (Contact Section)
 // ================================================
 .contact {
-  @include section-spacing();
-  border-top: 1px solid map-get($colors, border-color);
   text-align: center;
+  @include section-spacing();
+
+
+  & {
+    border-top: 1px solid map.get($colors, border-color);
+  }
 
   &__container {
     max-width: 48rem;
@@ -468,18 +483,18 @@ h1, h2, h3, a, button {
 
   &__description {
     font-size: 1.125rem;
-    color: map-get($colors, text-muted);
+    color: map.get($colors, text-muted);
     margin-bottom: 2rem;
   }
 
   &__email-button {
     @include button-base();
-    background-color: map-get($colors, indigo-600);
-    color: map-get($colors, text-primary);
+    background-color: map.get($colors, indigo-600);
+    color: map.get($colors, text-primary);
     margin-bottom: 3rem;
 
     &:hover {
-      background-color: map-get($colors, indigo-700);
+      background-color: map.get($colors, indigo-700);
     }
   }
 
@@ -490,11 +505,11 @@ h1, h2, h3, a, button {
     gap: 1.5rem;
 
     &-link {
-      color: map-get($colors, text-muted);
+      color: map.get($colors, text-muted);
       @include transition();
 
       &:hover {
-        color: map-get($colors, text-primary);
+        color: map.get($colors, text-primary);
       }
 
       svg {
@@ -529,7 +544,7 @@ h1, h2, h3, a, button {
 // ================================================
 // 技能图标颜色
 // ================================================
-.skill-angular { color: map-get($colors, red-500); }
-.skill-typescript { color: map-get($colors, blue-500); }
-.skill-nodejs { color: map-get($colors, green-500); }
-.skill-firebase { color: map-get($colors, yellow-500); }
+.skill-angular { color: map.get($colors, red-500); }
+.skill-typescript { color: map.get($colors, blue-500); }
+.skill-nodejs { color: map.get($colors, green-500); }
+.skill-firebase { color: map.get($colors, yellow-500); }

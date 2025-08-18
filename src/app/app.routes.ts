@@ -1,9 +1,14 @@
 import { Routes } from '@angular/router';
 import { HomeComponent } from './home/home';
-import { ProjectsComponent } from './projects/projects';
+import { ProjectsComponent } from './projects/projects'
+import { BlogComponent } from './blog/blog';
+import { PageNotFound} from './page-not-found/page-not-found';
+
 export const routes: Routes = [
-  { path: '', component: HomeComponent },
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: 'home', component: HomeComponent },
   { path: 'projects', component: ProjectsComponent },
-  // Optional: Add a 404 Not Found route
-  { path: '**', redirectTo: '' }
+  { path: 'blogs', component: BlogComponent },
+  { path: '**', component: PageNotFound },
+  { path: 'blogs/:id', component: BlogComponent },
 ];

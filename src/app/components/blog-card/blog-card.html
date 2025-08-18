@@ -1,0 +1,24 @@
+<div class="blog-card">
+  <div class="blog-card-content">
+    <div class="blog-meta">
+      <span class="blog-date">{{ blog.publishedDate | date:'MMM dd, yyyy' }}</span>
+      <span class="blog-author">by {{ blog.author }}</span>
+    </div>
+
+    <h3 class="blog-title">{{ blog.title }}</h3>
+    <p class="blog-excerpt">{{ blog.excerpt }}</p>
+
+    <div class="blog-tags">
+      <span class="tag" *ngFor="let tag of blog.tags">{{ tag }}</span>
+    </div>
+
+    <div class="blog-actions">
+      <a
+        class="read-more-btn"
+        [routerLink]="['/blog', blog.slug]"
+      >
+        Read More
+      </a>
+    </div>
+  </div>
+</div>

@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { GithubIcon } from './github-icon';
+import { GithubIconComponent } from './github-icon';
 
 describe('GithubIcon', () => {
-  let component: GithubIcon;
-  let fixture: ComponentFixture<GithubIcon>;
+  let component: GithubIconComponent;
+  let fixture: ComponentFixture<GithubIconComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [GithubIcon]
+      imports: [GithubIconComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(GithubIcon);
+    fixture = TestBed.createComponent(GithubIconComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

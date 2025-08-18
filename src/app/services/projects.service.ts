@@ -9,29 +9,29 @@ export class ProjectsService {
   private projects: Project[] = [
     {
       id: '1',
-      title: 'Personal Blog',
-      description: 'Welcome to the World of Ash — a space where I share my learning journey, projects, and tech explorations in Azure, GitHub, machine learning, and more.',
-      imageUrl: 'https://placehold.co/600x400/1f2937/ffffff?text=Project1',
-      imageAlt: '项目1截图',
-      demoUrl: 'https://burningzilch.github.io/',
-      githubUrl: 'https://github.com/BurningZilch/BurningZilch.github.io',
-      demoLabel: 'Blog'
-    },
-    {
-      id: '2',
       title: 'DK-DINO',
       description: 'Developed as part of a university assignment, this project extends the capabilities of the GrovePi platform by implementing legacy animation support.',
-      imageUrl: 'https://placehold.co/600x400/1f2937/ffffff?text=Project2',
-      imageAlt: '项目2截图',
+      imageUrl: 'assets/img/dino.png',
+      imageAlt: 'image of prototype',
       githubUrl: 'https://github.com/BurningZilch/DK-DINO'
     },
     {
-      id: '3',
+      id: '2',
       title: 'BLE-jamming-simulation',
       description: 'a university assessment that simulates how Bluetooth Low Energy (BLE) jamming interference impacts the performance of a machine learning model.',
-      imageUrl: 'https://placehold.co/600x400/1f2937/ffffff?text=Project3',
-      imageAlt: '项目3截图',
+      imageUrl: 'assets/img/BLE.png',
+      imageAlt: 'matlab simulation',
       githubUrl: 'https://github.com/BurningZilch/BLE-jamming-simulation'
+    },
+    {
+      id: '3',
+      title: 'Climate Map',
+      description: 'a visualization that visualize climate change in from 1850 worldwide. Currently focus on temperature, will add more dimension in future. ',
+      imageUrl: 'https://placehold.co/600x400/1f2937/ffffff?text=Coming Soon',
+      imageAlt: 'climate Map',
+      demoLabel: 'Live Demo',
+      githubUrl: '',
+      demoUrl: '/project1'
     }
     // New placeholder project for testing
 
